@@ -7,7 +7,7 @@ jobs:
       - name: Print Greetings Message
         run: | 
           echo "Hello Rajat, Welcome to world of Github Actions"
-          echo "Be advised that this is a multiline command"
+          hostname
       - name: Print GoodBye Message
         run: echo "See you again ! "
         
