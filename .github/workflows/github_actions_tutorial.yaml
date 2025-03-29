@@ -10,6 +10,11 @@ jobs:
           hostname
       - name: Print Runner Configuration
         run: lscpu
+
+      - name: Print list of packages Installed
+        run: sudo apt list --installed
+      - name: Print ID of user
+        run: id
       - name: Print GoodBye Message
         run: echo "See you again ! "
         
