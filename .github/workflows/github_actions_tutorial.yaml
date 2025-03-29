@@ -8,6 +8,8 @@ jobs:
         run: | 
           echo "Hello Rajat, Welcome to world of Github Actions"
           hostname
+      - name: Print Runner Configuration
+        run: lscpu
       - name: Print GoodBye Message
         run: echo "See you again ! "
         
