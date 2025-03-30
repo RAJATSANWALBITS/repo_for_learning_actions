@@ -8,3 +8,5 @@ jobs:
         uses: actions/checkout@v3
       - name: MyCurrent Runner directory
         run: pwd
+      - name: Printing workspace Variable
+        run: echo {{GITHUB.WORKSPACE}}
