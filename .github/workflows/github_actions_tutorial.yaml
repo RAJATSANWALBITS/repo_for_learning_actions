@@ -24,6 +24,7 @@ jobs:
         
   deploy:
     runs-on: ubuntu-latest
+    needs: test              #we can use [jobname1,jobname2....so on]
     steps:
       - name: Download the code from repository 
         uses: actions/checkout@v3
