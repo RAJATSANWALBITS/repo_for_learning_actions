@@ -6,3 +6,5 @@ jobs:
     steps:
       - name: Download the code from repository 
         uses: actions/checkout@v3
+      - name: MyCurrent Runner directory
+        run: pwd
