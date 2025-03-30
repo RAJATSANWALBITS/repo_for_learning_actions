@@ -14,7 +14,7 @@ jobs:
         run: echo "${{ toJSON(secrets) }}"
 
       - name: Print the Githubs jobs context
-        run: echo "${{ toJSON(jobs) }}"
+        run: echo "${{ toJSON(job) }}"
 
 
       - name: Print the Githubs runner context
