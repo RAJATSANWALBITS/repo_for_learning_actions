@@ -13,6 +13,6 @@ jobs:
       - name: Print the environment variables by syntax 2
         run: echo $NameofLaptop
       - name: Actor who kicked of this workflow
-        run: echo "Name of Actor $GITHUB_ACTOR ""
+        run: echo "Name of Actor $GITHUB_ACTOR"
         
         
