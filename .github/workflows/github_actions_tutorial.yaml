@@ -15,6 +15,8 @@ jobs:
       - name: default variables
         run: | 
           echo "Name of Actor $GITHUB_ACTOR"        # this is one of the Default variable. You can not access them via env
-          echo "Event name: $GITHUB_EVENT_NAME"
+          echo "Event name: $GITHUB_EVENT_NAME"      # this is the event name like push which triggered the workflow
+          echo "Repository name: $GITHUB_REPOSITORY"
+          echo "Runner OS: $RUNNER_OS"
         
         
