@@ -9,4 +9,6 @@ jobs:
       - name: MyCurrent Runner directory
         run: pwd
       - name: Printing workspace Variable
-        run: echo ${{GITHUB_WORKSPACE}}
+        run: |
+          echo ${{github_workspace}}
+          echo $GITHUB_WORKSPACE
