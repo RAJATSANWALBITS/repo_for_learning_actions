@@ -10,5 +10,5 @@ jobs:
         run: pwd
       - name: Printing workspace Variable
         run: |
-          echo ${{github_workspace}}
+          echo ${{github.workspace}}
           echo $GITHUB_WORKSPACE
