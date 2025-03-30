@@ -1,7 +1,7 @@
 name: Github Contexts
 on: workflow_dispatch
 jobs:
-  Contexts Details:
+  ContextDetails:
     runs-on: ubuntu-latest
     steps:
       - name: Print the Githubs github context
