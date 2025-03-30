@@ -12,7 +12,9 @@ jobs:
         run: echo "${{env.NameofLaptop}}"
       - name: Print the environment variables by syntax 2
         run: echo $NameofLaptop
-      - name: Actor who kicked of this workflow
-        run: echo "Name of Actor $GITHUB_ACTOR"
+      - name: default variables
+        run: | 
+          echo "Name of Actor $GITHUB_ACTOR"        # this is one of the Default variable. You can not access them via env
+          echo "Event name: $GITHUB_EVENT_NAME"
         
         
