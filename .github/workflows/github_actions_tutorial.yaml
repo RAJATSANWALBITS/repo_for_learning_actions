@@ -1,5 +1,8 @@
 name: Workflow to Learn actions
-on: [push,workflow_dispatch]
+on: 
+  pull_request:
+    types: [opened,edited]
+  
 jobs:
   test:
     runs-on: ubuntu-latest
