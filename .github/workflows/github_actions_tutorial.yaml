@@ -6,7 +6,9 @@ jobs:
   PrintEV:
     runs-on: ubuntu-latest
     steps:
-      - name: Print the environment variables
+      - name: Print the environment variables by syntax 1
         run: echo "${{env.NameofLaptop}}"
+      - name: Print the environment variables by syntax 2
+        run: echo $NameofLaptop
         
         
