@@ -2,12 +2,13 @@ name: Workflow to Learn actions
 on: 
   pull_request:
     types: [opened,edited]
+  workflow_dispatch:
   
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Download the code from repository 
+      - name: Download the code from repository...
         uses: actions/checkout@v3
       - name: MyCurrent Runner directory
         run: pwd
