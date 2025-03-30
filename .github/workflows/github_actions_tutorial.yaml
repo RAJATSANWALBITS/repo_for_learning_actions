@@ -1,52 +1,12 @@
-name: Workflow to Learn actions
-on: 
-  pull_request:
-    types: [opened,edited]
-  workflow_dispatch:
-  
+name: Workflow to Learn action
+on: push
+env:
+  NameofLaptop: "Asus Vivobook"
 jobs:
-  test:
+  PrintEV:
     runs-on: ubuntu-latest
     steps:
-      - name: Download the code from repository...
-        uses: actions/checkout@v3
-      - name: MyCurrent Runner directory
-        run: pwd
-      - name: Printing workspace Variable
-        run: |
-          echo ${{github.workspace}}
-          echo $GITHUB_WORKSPACE
-      - name: Install NodeJS 18
-        uses: actions/setup-node@v3
-        with: 
-          node-version: '18'
-      - name: Installing dependencies
-        run: npm c
-
-      - name: NodeJs version validate
-        run: node -v
+      - name: Print the environment variables
+        run: echo "${{env.NameofLaptop}}
         
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test              #we can use [jobname1,jobname2....so on]
-    steps:
-      - name: Download the code from repository 
-        uses: actions/checkout@v3
-      - name: MyCurrent Runner directory
-        run: pwd
-      - name: Printing workspace Variable
-        run: |
-          echo ${{github.workspace}}
-          echo $GITHUB_WORKSPACE
-      - name: Install NodeJS 18
-        uses: actions/setup-node@v3
-        with: 
-          node-version: '18'
-      - name: Installing dependencies
-        run: npm ci
-
-      - name: NodeJs version validate
-        run: node -v
-      - name: Build
-        run: npm run build
         
