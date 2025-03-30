@@ -12,3 +12,10 @@ jobs:
         run: |
           echo ${{github.workspace}}
           echo $GITHUB_WORKSPACE
+      - name: Install NodeJS 18
+        uses: actions/setup-node@v3
+        with: 
+          node-version: '18'
+
+      - name: NodeJs version validate
+        run: nodejs -v
