@@ -1,6 +1,10 @@
 name: Workflow to Learn actions
 on: 
   pull_request:
+    branches:
+      - main
+      - dev-*  # means dev-ftest dev-dummy-is etc
+      - feature/** # means feature/dev/test 
     types: [opened,edited]
   workflow_dispatch:
   push:
