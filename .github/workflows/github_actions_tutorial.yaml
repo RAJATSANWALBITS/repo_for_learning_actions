@@ -4,6 +4,8 @@ env:
   NameofLaptop: "Asus Vivobook"
 jobs:
   PrintEV:
+    env:
+      NameofLaptop: "Asus Vivobook 2"
     runs-on: ubuntu-latest
     steps:
       - name: Print the environment variables by syntax 1
