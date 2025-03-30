@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print the environment variables
-        run: echo "${{env.NameofLaptop}}
+        run: echo "${{env.NameofLaptop}}"
         
         
