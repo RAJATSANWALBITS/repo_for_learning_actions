@@ -18,4 +18,4 @@ jobs:
           node-version: '18'
 
       - name: NodeJs version validate
-        run: nodejs -v
+        run: node -v
