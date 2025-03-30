@@ -1,6 +1,6 @@
 #http://graphite.dev/guides/github-actions-contexts
 name: Github Contexts
-on: workflow_dispatch
+on: [issues,workflow_dispatch]
 jobs:
   ContextDetails:
     runs-on: ubuntu-latest
