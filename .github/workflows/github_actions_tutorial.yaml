@@ -1,20 +1,8 @@
 name: Workflow to Learn actions
-on: workflow_dispatch
+on: push
 jobs:
-  First_job:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Greetings Message
-        run: | 
-          echo "Hello Rajat, Welcome to world of Github Actions"
-          hostname
-      - name: Print Runner Configuration
-        run: lscpu
-
-      - name: Print list of packages Installed
-        run: sudo apt list --installed
-      - name: Print ID of user
-        run: id
-      - name: Print GoodBye Message
-        run: echo "See you again ! "
-        
+      - name: Download the code from repository 
+        uses: actions/checkout@v3
