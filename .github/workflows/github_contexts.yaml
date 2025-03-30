@@ -1,3 +1,4 @@
+#http://graphite.dev/guides/github-actions-contexts
 name: Github Contexts
 on: workflow_dispatch
 jobs:
@@ -6,3 +7,17 @@ jobs:
     steps:
       - name: Print the Githubs github context
         run: echo "${{ toJSON(github) }}"
+      - name: Print the Githubs env context
+        run: echo "${{ toJSON(env) }}"
+
+      - name: Print the Githubs secrets context
+        run: echo "${{ toJSON(secrets) }}"
+
+      - name: Print the Githubs jobs context
+        run: echo "${{ toJSON(jobs) }}"
+
+
+      - name: Print the Githubs runner context
+        run: echo "${{ toJSON(runner) }}"
+      - name: Print the Githubs needs context
+        run: echo "${{ toJSON(needs) }}"
