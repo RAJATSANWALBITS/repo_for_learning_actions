@@ -1,8 +1,16 @@
 name: This is the reusable workflow
 on: 
-  workflow_call
+  workflow_call:
     inputs:
-      
+      variableA:
+        type: string
+        required: true
+        
 jobs: 
-  reusable job:
+  reusableJob:
+    runs-on: ubuntu-latest
+    steps:
+      name: Print that variable
+      run: echo "The variable you passed is: ${{inputs.variableA}}"
+      
     
