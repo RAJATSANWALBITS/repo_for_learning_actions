@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       name: Print that variable
-      run: echo "The variable you passed is: ${{inputs.variableA}}"
+      run: echo ${{inputs.variableA}}
       
     
