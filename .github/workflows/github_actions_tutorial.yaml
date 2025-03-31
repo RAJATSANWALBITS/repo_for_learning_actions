@@ -5,3 +5,5 @@ jobs:
     uses: ./.github/workflows/reusable.yaml
     with:
       variableA: "Rajat"
+    secrets:
+      abcSecret: {{ secrets.abc }}
