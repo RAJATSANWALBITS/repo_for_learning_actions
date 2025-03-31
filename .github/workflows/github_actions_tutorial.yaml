@@ -19,6 +19,7 @@ jobs:
 
   showEV:
     runs-on: ubuntu-latest
+    needs: PrintEV
     steps:
       - name: Showing EV
         run: echo ${{github}}
