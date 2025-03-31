@@ -9,14 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print the environment variables by syntax 1
-        run: echo "${{env.NameofLaptop}}"
+        id: EV1
+        run: echo "${{env.NameofLapto}}"
       - name: Print the environment variables by syntax 2
+        if: failure() && steps.EV1.outcome='failure'
         run: echo $NameofLaptop
-      - name: default variables
-        run: | 
-          echo "Name of Actor $GITHUB_ACTOR"        # this is one of the Default variable. You can not access them via env
-          echo "Event name: $GITHUB_EVENT_NAME"      # this is the event name like push which triggered the workflow
-          echo "Repository name: $GITHUB_REPOSITORY"
-          echo "Runner OS: $RUNNER_OS"
+
         
         
