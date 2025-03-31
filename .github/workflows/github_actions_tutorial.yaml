@@ -2,11 +2,6 @@ name: Reusable workflow Tutorial
 on: push
 jobs:
   CheckingReusableWorkflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Call the re-usable workflow
-        uses: ./.github/workflows/reusable.yaml
-        with:
-          VariableA: "Rajat"
+    uses: ./.github/workflows/reusable.yaml
+    with:
+      variableA: "Rajat"
