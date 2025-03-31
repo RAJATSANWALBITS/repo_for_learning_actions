@@ -7,3 +7,10 @@ jobs:
       variableA: "Rajat"
     secrets:
       abcSecret: ${{ secrets.abc }}
+  
+  PrintingtheOutcomeofresuableWorkflow:
+    needs: CheckingReusableWorkflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing the value
+        run: echo ${{ jobs.CheckingReusableWorkflow.outputs.outcome }}
