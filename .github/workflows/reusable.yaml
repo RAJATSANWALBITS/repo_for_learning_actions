@@ -10,7 +10,7 @@ jobs:
   reusableJob:
     runs-on: ubuntu-latest
     steps:
-      name: Print that variable
-      run: echo ${{inputs.variableA}}
+      - name: Print that variable
+        run: echo ${{inputs.variableA}}
       
     
