@@ -6,4 +6,4 @@ jobs:
     with:
       variableA: "Rajat"
     secrets:
-      abcSecret: {{ secrets.abc }}
+      abcSecret: ${{ secrets.abc }}
