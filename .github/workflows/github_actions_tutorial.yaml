@@ -1,10 +1,10 @@
 name: Reusable workflow Tutorial
 on: push
 jobs:
-  Checking Reusable Workflow
+  CheckingReusableWorkflow:
     runs-on: ubuntu-latest
     steps:
       - name: Call the re-usable workflow
         uses: ./.github/workflows/reusable.yaml
         with:
-          runner_name: {{ runner.os }}
+          VariableA: "Rajat"
