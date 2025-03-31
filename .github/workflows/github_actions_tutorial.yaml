@@ -1,28 +1,10 @@
-name: Workflow to Learn action
+name: Reusable workflow Tutorial
 on: push
-env:
-  NameofLaptop: "Asus Vivobook"
 jobs:
-  PrintEV:
-    env:
-      NameofLaptop: "Asus Vivobook 2"
+  Checking Reusable Workflow
     runs-on: ubuntu-latest
     steps:
-      - name: Print the environment variables by syntax 1
-        id: EV1
-        continue-on-error: true
-        run: |
-          echo "${{env.NameofLaptop }}"
-          heyhowdy
-      - name: Print the environment variables by syntax 2
-        run: echo $NameofLaptop
-
-  showEV:
-    runs-on: ubuntu-latest
-    needs: PrintEV
-    steps:
-      - name: Showing EV
-        run: echo ${{github}}
-
-        
-        
+      - name: Call the re-usable workflow
+        uses: ./.github/workflows/reusable.yaml
+        with:
+          runner_name: {{ runner.os }}
