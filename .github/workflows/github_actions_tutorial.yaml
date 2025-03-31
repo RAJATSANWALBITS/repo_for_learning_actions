@@ -10,17 +10,16 @@ jobs:
     steps:
       - name: Print the environment variables by syntax 1
         id: EV1
+        continue-on-error: true
         run: |
           echo "${{env.NameofLaptop }}"
           heyhowdy
       - name: Print the environment variables by syntax 2
-        if: failure() && steps.EV1.outcome=='failure'
         run: echo $NameofLaptop
 
   showEV:
     runs-on: ubuntu-latest
     needs: PrintEV
-    if: failure()
     steps:
       - name: Showing EV
         run: echo ${{github}}
