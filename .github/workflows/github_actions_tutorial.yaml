@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Printing the value
-        run: echo ${{ jobs.CheckingReusableWorkflow.outputs.outcome }}
+        run: echo ${{ needs.CheckingReusableWorkflow.outputs.outcome }}
