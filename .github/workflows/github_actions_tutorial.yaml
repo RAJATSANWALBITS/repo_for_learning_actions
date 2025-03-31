@@ -14,8 +14,14 @@ jobs:
           echo "${{env.NameofLaptop }}"
           heyhowdy
       - name: Print the environment variables by syntax 2
-        if: always()
+        if: steps.EV1.outcome=='failure'
         run: echo $NameofLaptop
+
+  showEV:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Showing EV
+        run: echo ${{github}}
 
         
         
