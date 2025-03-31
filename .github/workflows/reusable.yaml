@@ -5,12 +5,18 @@ on:
       variableA:
         type: string
         required: false
+    secrets:
+      abcSecret: 
+        required: true
         
 jobs: 
   reusableJob:
     runs-on: ubuntu-latest
     steps:
       - name: Print that variable
-        run: echo ${{inputs.variableA}}
+        run: |
+          echo ${{inputs.variableA}}
+          echo ${{secrets.abcSecret}} 
+        
       
     
