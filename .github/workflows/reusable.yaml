@@ -8,15 +8,20 @@ on:
     secrets:
       abcSecret: 
         required: true
+    outputs:
+      outcome:
+        value: ${{ steps.EV1.outputs.outcome }}
         
 jobs: 
   reusableJob:
     runs-on: ubuntu-latest
     steps:
       - name: Print that variable
+        id: EV1
         run: |
           echo ${{inputs.variableA}}
           echo ${{secrets.abcSecret}} 
+          echo "outcome=Sanwal" >> $GITHUB_OUTPUT 
         
       
     
