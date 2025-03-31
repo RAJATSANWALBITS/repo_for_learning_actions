@@ -10,11 +10,12 @@ on:
         required: true
     outputs:
       outcome:
-        value: ${{ jobs.reusableJob.outputs.outputs }}
+        value: ${{ jobs.reusableJob.outputs.outcome }}
         
 jobs: 
   reusableJob:
-    outputs: ${{steps.EV1.outputs.outcome}}
+    outputs:
+      outcome: ${{steps.EV1.outputs.outcome}}
     runs-on: ubuntu-latest
     steps:
       - name: Print that variable
