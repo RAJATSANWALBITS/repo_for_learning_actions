@@ -12,7 +12,7 @@ jobs:
         id: EV1
         run: echo "${{env.NameofLapto}}"
       - name: Print the environment variables by syntax 2
-        if: failure() && steps.EV1.outcome='failure'
+        if: failure() && steps.EV1.outcome=='failure'
         run: echo $NameofLaptop
 
         
